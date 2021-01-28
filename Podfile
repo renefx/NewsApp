@@ -12,11 +12,11 @@ target 'NewsApp' do
   pod 'Moya/RxSwift', '~> 14.0'
   pod 'ProgressHUD', '~> 13.4'
   pod 'SkeletonView', '~> 1.11.0'
-  pod "markymark", '~> 10.1.1'
   
   target 'NewsAppTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'RxTest', '5.0.1'
+    pod 'RxBlocking', '5.0.1'
   end
 
   target 'NewsAppUITests' do

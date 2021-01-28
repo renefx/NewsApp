@@ -418,46 +418,61 @@
                                             </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="39X-xZ-W6L">
-                                        <rect key="frame" x="0.0" y="378" width="375" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="65" id="wbl-SQ-DjB">
+                                        <rect key="frame" x="0.0" y="378" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="39X-xZ-W6L" id="mIE-2K-L5d">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wbl-SQ-DjB" id="WOE-KJ-Nwj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25I-JM-fQ3" customClass="MarkDownTextView" customModule="markymark">
-                                                    <rect key="frame" x="8" y="4" width="359" height="62"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="7i1-eQ-l68">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="65"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="lastLineFillPercent">
+                                                            <integer key="value" value="30"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="linesCornerRadius">
+                                                            <integer key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="skeletonLineSpacing">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                </view>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="25I-JM-fQ3" secondAttribute="trailing" constant="8" id="5A7-go-eG4"/>
-                                                <constraint firstItem="25I-JM-fQ3" firstAttribute="top" secondItem="mIE-2K-L5d" secondAttribute="top" constant="4" id="fGH-xw-Wsu"/>
-                                                <constraint firstItem="25I-JM-fQ3" firstAttribute="leading" secondItem="mIE-2K-L5d" secondAttribute="leading" constant="8" id="kAn-H8-ICa"/>
-                                                <constraint firstAttribute="bottom" secondItem="25I-JM-fQ3" secondAttribute="bottom" constant="4" id="z8b-Zu-h0a"/>
+                                                <constraint firstItem="7i1-eQ-l68" firstAttribute="top" secondItem="WOE-KJ-Nwj" secondAttribute="top" id="2gc-QZ-9vN"/>
+                                                <constraint firstAttribute="bottom" secondItem="7i1-eQ-l68" secondAttribute="bottom" id="YW8-1S-Zsz"/>
+                                                <constraint firstAttribute="trailing" secondItem="7i1-eQ-l68" secondAttribute="trailing" constant="8" id="mLg-oh-6ii"/>
+                                                <constraint firstItem="7i1-eQ-l68" firstAttribute="leading" secondItem="WOE-KJ-Nwj" secondAttribute="leading" constant="8" id="zXv-Qx-dQA"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="RpA-K5-A1p">
-                                        <rect key="frame" x="0.0" y="448" width="375" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="600" id="RpA-K5-A1p">
+                                        <rect key="frame" x="0.0" y="443" width="375" height="600"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RpA-K5-A1p" id="Q1o-Gz-Gxi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aV-cZ-CY0" customClass="MarkDownTextView" customModule="markymark">
-                                                    <rect key="frame" x="8" y="4" width="359" height="192"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                </view>
+                                                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbG-g6-LEg">
+                                                    <rect key="frame" x="9" y="0.0" width="357" height="570"/>
+                                                    <color key="backgroundColor" name="WhiteWhite"/>
+                                                    <wkWebViewConfiguration key="configuration">
+                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                        <wkPreferences key="preferences" minimumFontSize="10"/>
+                                                    </wkWebViewConfiguration>
+                                                </wkWebView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="1aV-cZ-CY0" secondAttribute="trailing" constant="8" id="BCe-AD-hMf"/>
-                                                <constraint firstItem="1aV-cZ-CY0" firstAttribute="leading" secondItem="Q1o-Gz-Gxi" secondAttribute="leading" constant="8" id="Fbv-ps-jMV"/>
-                                                <constraint firstItem="1aV-cZ-CY0" firstAttribute="top" secondItem="Q1o-Gz-Gxi" secondAttribute="top" constant="4" id="YGS-jh-jEH"/>
-                                                <constraint firstAttribute="bottom" secondItem="1aV-cZ-CY0" secondAttribute="bottom" constant="4" id="a5v-t6-g5b"/>
+                                                <constraint firstAttribute="trailing" secondItem="bbG-g6-LEg" secondAttribute="trailing" constant="9" id="EFa-ic-eQ5"/>
+                                                <constraint firstItem="bbG-g6-LEg" firstAttribute="leading" secondItem="Q1o-Gz-Gxi" secondAttribute="leading" constant="9" id="Otx-bh-8yl"/>
+                                                <constraint firstItem="bbG-g6-LEg" firstAttribute="top" secondItem="Q1o-Gz-Gxi" secondAttribute="top" id="p5J-hP-1xr"/>
+                                                <constraint firstAttribute="bottom" secondItem="bbG-g6-LEg" secondAttribute="bottom" constant="30" id="rGr-Gi-l0H"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -476,10 +491,10 @@
                     <connections>
                         <outlet property="authorImage" destination="khq-dk-nXA" id="WKS-9e-y77"/>
                         <outlet property="authorText" destination="oPv-jw-ZLi" id="HbK-KY-OjB"/>
-                        <outlet property="bodyMarkdown" destination="1aV-cZ-CY0" id="aen-DI-pdg"/>
+                        <outlet property="bodyWeb" destination="bbG-g6-LEg" id="2tz-ma-tGk"/>
                         <outlet property="dateTimeNews" destination="BWa-Fa-N6r" id="Szj-xL-vgR"/>
                         <outlet property="imageBig" destination="Stb-ka-DG6" id="aNW-38-eo6"/>
-                        <outlet property="imageSubtitleMarkdown" destination="25I-JM-fQ3" id="Dik-qq-8zH"/>
+                        <outlet property="linhaFina" destination="7i1-eQ-l68" id="vwj-m3-zjx"/>
                         <outlet property="originText" destination="BNS-Fc-nZY" id="7Sv-K1-IHL"/>
                         <outlet property="titleNews" destination="iRS-v0-8H5" id="TYk-ta-MS9"/>
                     </connections>

@@ -10,6 +10,7 @@ import RxSwift
 import RxCocoa
 import markymark
 import SkeletonView
+import WebKit
 
 class NewsDetailTableViewController: UITableViewController, ViewModelBased {
     @IBOutlet weak var imageBig: UIImageView!
@@ -18,8 +19,8 @@ class NewsDetailTableViewController: UITableViewController, ViewModelBased {
     @IBOutlet weak var authorText: UILabel!
     @IBOutlet weak var originText: UILabel!
     @IBOutlet weak var dateTimeNews: UILabel!
-    @IBOutlet weak var imageSubtitleMarkdown: MarkDownTextView!
-    @IBOutlet weak var bodyMarkdown: MarkDownTextView!
+    @IBOutlet weak var linhaFina: UILabel!
+    @IBOutlet weak var bodyWeb: WKWebView!
     
     
     var viewModel: NewsDetailViewModel!
@@ -76,8 +77,8 @@ class NewsDetailTableViewController: UITableViewController, ViewModelBased {
         self.authorText.text = document.creditoFormatted
         self.originText.text = document.source
         self.dateTimeNews.text = document.dataFormatted
-        self.imageSubtitleMarkdown.text = document.legendaImagem
-        self.bodyMarkdown.text = document.corpoformatado
+        self.linhaFina.text = document.linhafina
+        self.bodyWeb.loadHTMLString(document.corpoformatado ?? "", baseURL: nil)
         
     }
     
@@ -88,7 +89,7 @@ class NewsDetailTableViewController: UITableViewController, ViewModelBased {
         self.authorText.showAnimatedGradientSkeleton()
         self.originText.showAnimatedGradientSkeleton()
         self.dateTimeNews.showAnimatedGradientSkeleton()
-        self.imageSubtitleMarkdown.showAnimatedGradientSkeleton()
+        self.linhaFina.showAnimatedGradientSkeleton()
         
     }
     
@@ -99,6 +100,6 @@ class NewsDetailTableViewController: UITableViewController, ViewModelBased {
         self.authorText.hideSkeleton()
         self.originText.hideSkeleton()
         self.dateTimeNews.hideSkeleton()
-        self.imageSubtitleMarkdown.hideSkeleton()
+        self.linhaFina.hideSkeleton()
     }
 }

@@ -90,8 +90,7 @@ class LoginViewModel: ViewModel {
             .filter { $0 }
             .withLatestFrom(input.username)
             .withLatestFrom(input.password, resultSelector: { (username, password) -> UserLogin in
-//                UserLogin(username: username, password: password)
-                UserLogin(username: "devmobile", password: "uC&+}H4wg?rYbF:")
+                UserLogin(username: username, password: password)
             })
             .subscribe(onNext: { (user) in
                 self.isLoading.onNext(true)

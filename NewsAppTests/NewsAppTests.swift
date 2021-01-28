@@ -6,12 +6,17 @@
 //
 
 import XCTest
+import RxSwift
 @testable import NewsApp
 
 class NewsAppTests: XCTestCase {
-
+    let disposeBag = DisposeBag()
+    var viewmodel: LoginViewModel?
+    var loginInputs: LoginInputs?
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        viewmodel = LoginViewModel(NewsService(stub: true), disposeBag: disposeBag)
+//        loginInputs = LoginInputs(username: , password: , tapExecuteLogin: )
     }
 
     override func tearDownWithError() throws {
@@ -19,8 +24,7 @@ class NewsAppTests: XCTestCase {
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//        viewmodel?.setUp(with: LoginInputs)
     }
 
     func testPerformanceExample() throws {
