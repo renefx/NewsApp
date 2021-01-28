@@ -13,6 +13,13 @@ cd NewsApp
 pod install
 open .
 ```
+### CocoaPods
+Se você encontrar o erro abaixo, o cocoapods do seu Mac está desatualizado. Execute o comando abaixo para atualizá-lo e instalar os pods:
+```sh
+cd NewsApp
+pod install --repo-update
+```
+![preview](./erro_cocoapods_desatualizado.jpeg)
 
 ## Contact Info
 renefx@gmail.com
