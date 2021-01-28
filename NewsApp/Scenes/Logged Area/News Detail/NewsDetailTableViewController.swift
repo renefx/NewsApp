@@ -8,7 +8,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import markymark
 import SkeletonView
 import WebKit
 
