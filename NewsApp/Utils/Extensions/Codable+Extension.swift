@@ -13,7 +13,7 @@ extension JSONDecoder {
         do {
             return try decoder.decode(type, from: data)
         } catch {
-            throw DefaultServerError(message: Constants.unknownError, statusCode: -9999)
+            throw DefaultServerError(message: Constants.unknownError, statusCode: Constants.parsingError)
         }
     }
 }

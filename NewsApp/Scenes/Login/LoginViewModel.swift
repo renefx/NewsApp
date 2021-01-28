@@ -94,10 +94,9 @@ class LoginViewModel: ViewModel {
             })
             .subscribe(onNext: { (user) in
                 self.isLoading.onNext(true)
-                self.service.postNewsLogin(user: user).filterSuccess().subscribe { [weak self] (response) in
+                self.service.postNewsLogin(user: user).subscribe { [weak self] (response) in
                     self?.isLoading.onNext(false)
-                    let object = try? JSONDecoder.decode(data: response.data, to: TokenJwt.self)
-                    self?.apiCallResult.onNext(object)
+                    self?.apiCallResult.onNext(response)
                 } onError: { [weak self] (erro) in
                     self?.isLoading.onNext(false)
                     self?.apiCallResult.onNext(erro)

@@ -17,16 +17,25 @@ class NewsService {
         newsProvider = stub ? MoyaProvider<NewsProvider>(stubClosure: MoyaProvider.immediatelyStub) : MoyaProvider<NewsProvider>()
     }
     
-    func postNewsLogin(user: UserLogin) -> Single<Response> {
-        return newsProvider.rx.request(.getNewsToken(user: user)).filterSuccess()
+    func postNewsLogin(user: UserLogin) -> Single<TokenJwt> {
+        return newsProvider.rx
+            .request(.getNewsToken(user: user))
+            .filterSuccess(returnType: TokenJwt.self)
     }
 
-    func fetchNews() -> Single<Response> {
-        return newsProvider.rx.request(.getNews).filterSuccess()
+    func fetchNews() -> Single<[NewsListElement]> {
+        return newsProvider.rx
+            .request(.getNews)
+            .filterSuccess(returnType: [NewsListElement].self)
     }
 
-    func fetchNewsDetail(newsId: String) -> Single<Response> {
-        return newsProvider.rx.request(.getNewsDetail(newsId: newsId)).filterSuccess()
+    func fetchNewsDetail(newsId: String) -> Single<Documento?> {
+        return newsProvider.rx
+            .request(.getNewsDetail(newsId: newsId))
+            .filterSuccess(returnType: [NewsDetailWrapperElement].self)
+            .map { (arrayWrapper) -> Documento? in
+                arrayWrapper.first?.documento
+            }
     }
 }
 

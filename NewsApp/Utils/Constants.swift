@@ -16,6 +16,7 @@ struct Constants {
     static let serviceUnavailableError = "Serviço não disponível. 😅 Tente novamente mais tarde."
     static let notConnectedToInternet = "Você não está conectado a internet. Conecte-se e tente novamente."
     static let notFound = "Essa notícia não foi encontrada 🧐"
+    static let parsingError = -88888
     
     static let loadingColor = UIColor(named: "Primary") ?? .black
     static let loadingBackgroundColor = UIColor(named: "Accent")?.withAlphaComponent(0.5) ?? .white

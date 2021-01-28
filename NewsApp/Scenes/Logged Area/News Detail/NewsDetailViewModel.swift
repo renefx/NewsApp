@@ -66,14 +66,8 @@ class NewsDetailViewModel: ViewModel {
         self.isLoading.onNext(true)
         self.service.fetchNewsDetail(newsId: self.idNews)
             .subscribe(onSuccess: { [weak self] (response) in
-                print("aliiii")
                 self?.isLoading.onNext(false)
-                do {
-                    let object = try JSONDecoder.decode(data: response.data, to: [NewsDetailWrapperElement].self)
-                    self?.apiCallResult.onNext(object.first?.documento)
-                } catch (let erro) {
-                    self?.apiCallResult.onError(erro)
-                }
+                self?.apiCallResult.onNext(response)
             }, onError: { [weak self] (erro) in
                 self?.isLoading.onNext(false)
                 self?.apiCallResult.onError(erro)
